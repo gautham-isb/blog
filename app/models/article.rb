@@ -18,5 +18,8 @@ class Article < ActiveRecord::Base
 		"#{title} - #{published_at.to_date}"
 	end
 	
+	def published?
+		published_at.present?
+	end	
 	
 end
